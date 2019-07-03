@@ -44,8 +44,14 @@ var resetInputs = function() {
 $(document).ready(function() {
   $('.create').click(function() {
     if (getKeyInput() !== '' && getValueInput() !== '') {
-      createItem(getKeyInput(), getValueInput());
-      resetInputs();
+      if (keyExists(getKeyInput())) {
+        if(confirm('key already exists in database, do you want to update instead?')) {
+          updateItem(getKeyInput(), getValueInput());
+        }
+      } else {
+        createItem(getKeyInput(), getValueInput());
+        resetInputs();
+      }
     } else  {
       alert('key and value must not be blank');
     }
@@ -82,6 +88,8 @@ $(document).ready(function() {
   })
 
   $('.clear').click(function() {
-    return clearDatabase();
+    if (confirm('WARNING: Are you sure you want to clear the database? \n                THIS ACTION CANNOT BE UNDONE')) {
+      return clearDatabase();
+    }
   })
 })
