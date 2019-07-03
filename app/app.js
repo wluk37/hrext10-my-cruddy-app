@@ -7,27 +7,26 @@
 */
 
 //localStorage functions
-////create
 var createItem = function(key, value) {
   return window.localStorage.setItem(key, value);
 }
 
-////update
 var updateItem = function(key, value) {
   return window.localStorage.setItem(key, value);
 }
 
-////delete
 var deleteItem = function(key) {
   return window.localStorage.removeItem(key);
 }
 
-////clear database
 var clearDatabase = function() {
   return window.localStorage.clear();
 }
 
-//input field functions
+var keyExists = function(key) {
+  return window.localStorage.getItem(key) !== null
+}
+
 var getKeyInput = function() {
   return $('.key').val();
 }
@@ -41,29 +40,47 @@ var resetInputs = function() {
   $('.value').val('');
 }
 
+
 $(document).ready(function() {
-  //click handlers
-  ////create button
   $('.create').click(function() {
-    createItem(getKeyInput(), getValueInput());
+    if (getKeyInput() !== '' && getValueInput() !== '') {
+      createItem(getKeyInput(), getValueInput());
+      resetInputs();
+    } else  {
+      alert('key and value must not be blank');
+    }
   });
 
-  ////update button
   $('.update').click(function() {
-    updateItem(getKeyInput(), getValueInput());
+    if (getKeyInput() !== '' && getValueInput() !== '') {
+      if (keyExists(getKeyInput())) {
+        updateItem(getKeyInput(), getValueInput());
+        resetInputs();
+      } else {
+        alert('key does not exist in database');
+      }
+    } else {
+      alert('key and value must not be blank');
+    }
   });
 
-  ////delete button
   $('.delete').click(function() {
-    deleteItem(getKeyInput());
+     if (getKeyInput() !== '') {
+      if (keyExists(getKeyInput())) {
+        deleteItem(getKeyInput());
+        resetInputs();
+      } else {
+        alert('key does not exist in database');
+      }
+    } else {
+      alert('key must not be blank');
+    }
   });
 
-  ////reset input
   $('.reset').click(function() {
     resetInputs();
   })
 
-  ////clear database
   $('.clear').click(function() {
     return clearDatabase();
   })
