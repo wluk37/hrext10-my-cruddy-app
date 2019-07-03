@@ -23,6 +23,15 @@ var clearDatabase = function() {
   return window.localStorage.clear();
 }
 
+var showDatabaseContents = function() {
+  $('table').html(`<tr><td>Key</td><td>Value</td></tr>`);
+
+  for (var i = 0; i < window.localStorage.length; i++) {
+    var key = window.localStorage.key(i);
+    $('table').append(`<tr><td>${key}</td><td>${window.localStorage.getItem(key)}</td></tr>`)
+  }
+}
+
 var keyExists = function(key) {
   return window.localStorage.getItem(key) !== null
 }
@@ -40,16 +49,19 @@ var resetInputs = function() {
   $('.value').val('');
 }
 
-
 $(document).ready(function() {
+  showDatabaseContents();
+
   $('.create').click(function() {
     if (getKeyInput() !== '' && getValueInput() !== '') {
       if (keyExists(getKeyInput())) {
         if(confirm('key already exists in database, do you want to update instead?')) {
           updateItem(getKeyInput(), getValueInput());
+          showDatabaseContents();
         }
       } else {
         createItem(getKeyInput(), getValueInput());
+        showDatabaseContents();
         resetInputs();
       }
     } else  {
@@ -61,6 +73,7 @@ $(document).ready(function() {
     if (getKeyInput() !== '' && getValueInput() !== '') {
       if (keyExists(getKeyInput())) {
         updateItem(getKeyInput(), getValueInput());
+        showDatabaseContents();
         resetInputs();
       } else {
         alert('key does not exist in database');
@@ -74,6 +87,7 @@ $(document).ready(function() {
      if (getKeyInput() !== '') {
       if (keyExists(getKeyInput())) {
         deleteItem(getKeyInput());
+        showDatabaseContents();
         resetInputs();
       } else {
         alert('key does not exist in database');
@@ -89,7 +103,8 @@ $(document).ready(function() {
 
   $('.clear').click(function() {
     if (confirm('WARNING: Are you sure you want to clear the database? \n                THIS ACTION CANNOT BE UNDONE')) {
-      return clearDatabase();
+      clearDatabase();
+      showDatabaseContents();
     }
   })
 })
