@@ -24,11 +24,11 @@ var clearDatabase = function() {
 }
 
 var showDatabaseContents = function() {
-  $('table').html(`<tr><td>Key</td><td>Value</td></tr>`);
+  $('tbody').html('');
 
   for (var i = 0; i < window.localStorage.length; i++) {
     var key = window.localStorage.key(i);
-    $('table').append(`<tr><td>${key}</td><td>${window.localStorage.getItem(key)}</td></tr>`)
+    $('tbody').append(`<tr><td>${key}</td><td>${window.localStorage.getItem(key)}</td></tr>`)
   }
 }
 

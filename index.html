@@ -8,24 +8,39 @@
           integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60="
           crossorigin="anonymous"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/underscore.js/1.9.1/underscore-min.js"></script>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+  <link rel="stylesheet" type="text/css" href="css/style.css">
  </head>
 <body>
-  <label>Key</label>
-  <input class="key" type="text">
-  <label>Value</label>
-  <input class="value" type="text">
-  <button class="reset">Reset Input</button>
-  <div>
-    <button class="create">Create</button>
-    <button class="update">Update</button>
-    <button class="delete">Delete</button>
-    <button class="clear">Clear Database</button>
+  <div class="input-group mb-3">
+    <div class="input-group-prepend">
+      <label class="input-group-text">Key</label>
+    </div>
+    <input class="key form-control" type="text">
   </div>
-  <table>
-    <tr>
-      <td>Key</td>
-      <td>Value</td>
-    </tr>
+  <div class="input-group mb-3">
+    <div class="input-group-prepend">
+      <label class="input-group-text">Value</label>
+    </div>
+    <input class="value form-control" type="text">
+  </div>
+
+  <button class="reset btn btn-danger btn-sm">Reset Input</button>
+  <div>
+    <button class="create btn btn-success btn-sm">Create</button>
+    <button class="update btn btn-primary btn-sm">Update</button>
+    <button class="delete btn btn-warning btn-sm">Delete</button>
+    <button class="clear btn btn-danger btn-sm">Clear Database</button>
+  </div>
+  <table class="table table-striped">
+    <thead>
+      <tr>
+        <th scope="col">Key</th>
+        <th scope="col">Value</th>
+      </tr>
+    </thead>
+    <tbody>
+    </tbody>
   </table>
   <script src="app/app.js"></script>
 </body>

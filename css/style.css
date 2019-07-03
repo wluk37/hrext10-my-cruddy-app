@@ -1,0 +1,19 @@
+/*
+buttons
+table
+  header
+  other rows
+text (font for everything)
+dialog boxes (alert, confirm)
+spacing
+inputs (border swag)
+*/
+
+.input-group-text {
+  width: 60px;
+}
+
+.input-group {
+  width: auto;
+  margin: 20px;
+}
