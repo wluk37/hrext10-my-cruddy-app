@@ -1,0 +1,111 @@
+//////////////////////////////////////////////////////////
+//  //  //  //  //  //  //  //  //  //  //  //  //  //  //
+//        THE SUPER SECRET WORLD DOMINATION PLAN        //
+//    //         THROUGH SUGAR, SPICE, AND       //     //
+//                  EVERYTHING NICE                     //
+//  //  //  //  //  //  //  //  //  //  //  //  //  //  //                          
+//////////////////////////////////////////////////////////
+
+
+// The App //
+
+//////////////////////////////////////////////////////////
+
+            Sugar, Spice, and Everything Nice            
+
+//////////////////////////////////////////////////////////
+
+            Purpose: Personal Recipe Tracker
+
+      Main Function: [1] Records ingredients and amount
+
+Secondary Functions: [2] Records requisite supplies,
+                     [3] Records step-by-step instructions,
+                     [4] Scale conversion 
+                           (weight and volume),
+                     [5] Calorie tracker,
+                     [6] Be able to save and retrieve
+                           multiple recipe lists
+
+//////////////////////////////////////////////////////////
+
+                     GET IT TO WORK
+
+//////////////////////////////////////////////////////////
+
+Function [1]: Record Ingredients and Amount
+- <Day 1    Design Events for: 
+   & Day 2> [] Textbox for Recipe Title
+            [] Adding/Removing/Editing Ingredients 
+            [] Adding/Removing/Editing Numeral Amount
+            [] Adding/Removing/Editing 
+                 Volume/Weight type
+            [] Checkbox to keep track of ingredients
+                 that are on-hand
+            [] Refresh Entire Recipe
+            
+- <Day 2> Design and Decorate!
+            [] Title/Banner
+                 - Font Size/Type/Color
+                 - div size
+                 - Background-Color
+            [] Ingredient Table
+                 - Font Size/Type/Color
+                 - Table size
+                 - Background-Color
+
+==========================================================
+
+Function [2]: Record Requisite Supplies
+- <Day 3> Design Events for:
+            [] Adding/Removing/Editing Supplies
+            [] Adding/Removing/Editing Numeral Amount
+            
+- <Day 3> Design and Decorate!
+            [] Title/Banner
+                 - Font Size/Type/Color
+                 - div size
+                 - Background-Color
+            [] Supply Table
+                 - Font Size/Type/Color
+                 - Table size
+                 - Background-Color
+
+==========================================================
+
+Function [3]: Record Step-By-Step Instructions
+- <Day 4> Design Events for:
+            [] Adding/Removing/Editing Step Number
+            [] Adding/Removing/Editing Instructions
+            [] Highlight Buzz Words From Ingredient and
+                 Supply Lists
+- <Day 4> Design and Decorate!
+            [] Title/Banner
+                 - Font Size/Type/Color
+                 - div size
+                 - Background-Color
+            [] Instruction Table
+                 - Font Size/Type/Color
+                 - Table size
+                 - Background-Color
+-
+==========================================================
+
+Function [4]: Volume/Weight Conversion
+- <Day 5> Design Events for:
+            [] Input Numeral Amount and Volume/Weight
+            [] Selection of Desired Volume/Weight
+            [] Output of Transformed Volume/Weight
+- <Day 5> Design and Decorate!
+            []
+-
+
+==========================================================
+
+Function [5]: Calorie Tracker
+
+==========================================================
+
+Function [6]: Save and Retrieve Multiple Lists 
+
+==========================================================
