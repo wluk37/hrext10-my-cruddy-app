@@ -35,24 +35,31 @@ Secondary Functions: [2] Records requisite supplies,
 
 Function [1]: Record Ingredients and Amount
 - <Day 1    Design Events for: 
-   & Day 2> [] Textbox for Recipe Title
-            [] Adding/Removing/Editing Ingredients 
-            [] Adding/Removing/Editing Numeral Amount
-            [] Adding/Removing/Editing 
-                 Volume/Weight type
-            [] Checkbox to keep track of ingredients
-                 that are on-hand
-            [] Refresh Entire Recipe
+   & Day 2> [ ] Textbox for Recipe Title
+            [x] Adding/Removing/Editing Ingredients
+                  - Need buttons to work regardless of caps
+                    x addIngredient works regardless of caps
+                    - updateIngredient and removeIngredient 
+                        does not work regardless of caps                         
+            [x] Adding/Removing/Editing Numeral Amount
+            [x] Adding/Removing/Editing
+                  Volume/Weight type
+                  - Implement dropdown of options
+            [x] Table to show added ingredients
+            [ ] Checkbox to keep track of ingredients
+                  that are on-hand
+            [x] Refresh Entire Recipe
             
 - <Day 2> Design and Decorate!
-            [] Title/Banner
-                 - Font Size/Type/Color
-                 - div size
-                 - Background-Color
-            [] Ingredient Table
-                 - Font Size/Type/Color
-                 - Table size
-                 - Background-Color
+            [ ] Title/Banner
+                  - Font Size/Type/Color
+                  - div size
+                  - Background-Color
+            [ ] Ingredient Table
+                  - Font Size/Type/Color
+                  - Table size
+                  - Background-Color
+            [ ] Add tooltip text on buttons
 
 ==========================================================
 
