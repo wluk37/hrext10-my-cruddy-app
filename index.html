@@ -15,23 +15,30 @@
 
 
 <body>
-  <h1>Sugar, Spice, & Everything Nice</h1>
+  <div class="banner">
+    <h1>Sugar, Spice, & Everything Nice</h1>
+  </div>
+  <div class="recipe-banner">
   <input type="text" id="recipe-title" value="Chocolate Chip Cookies" onfocus="if (this.value === 'Chocolate Chip Cookies') this.value = '';"/>
   <button type="button" id="save-title" title="SAVE TITLE">Save Title</button>
-  <div class="ingredientButtons">
-    <button  type="button" id="add-ingredient" title="ADD ITEM">Add Ingredient</button>
-    <button  type="button" id="update-ingredient" title="UPDATE ITEM">Update Ingredient</button>
-    <button  type="button" id="remove-ingredient" title="REMOVE ITEM">Remove Ingredient</button>
-    <button  type="button" id="clear-storage" data-toggle="tooltip" data-placement="right" title="Removes All Items">OBLITERATION</button>
+  </div>
+  
+  <div class="ingredient-buttons">
+    <div class="ingredient-container">
+      <button  type="button" id="add-ingredient" title="ADD ITEM">Add Ingredient</button>
+      <button  type="button" id="update-ingredient" title="UPDATE ITEM">Update Ingredient</button>
+      <button  type="button" id="remove-ingredient" title="REMOVE ITEM">Remove Ingredient</button>
+      <button  type="button" id="clear-storage" data-toggle="tooltip" data-placement="right" title="Removes All Items">OBLITERATION</button>
+    </div>
+  </div>
+  <div class="ingredient-input">
+    <input type="text" id="ingredient-key" value="sugar" onfocus="if (this.value == 'sugar') this.value='';"/>
+    <input type="text" id="ingredient-value" value="2" onfocus="if (this.value == '2') this.value='';"/>
+    <input type="text" id="ingredient-scale" value="tsp" onfocus="if (this.value == 'tsp') this.value='';"/>
   </div>
 
-  <input type="text" id="ingredient-key" value="sugar" onfocus="if (this.value == 'sugar') this.value='';"/>
-  <input type="text" id="ingredient-value" value="2" onfocus="if (this.value == '2') this.value='';"/>
-  <input type="text" id="ingredient-scale" value="tsp" onfocus="if (this.value == 'tsp') this.value='';"/>
 
-
-
-  <table class="table table-striped ingredient-list">
+  <table class="table table-striped ingredient-list col-md-6 center">
     <thead>
       <tr>
         <th scope="col">Ingredients</th>

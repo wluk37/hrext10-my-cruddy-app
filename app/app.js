@@ -39,7 +39,10 @@ var showDatabaseContents = function(){
 
   for (var i = 0; i < window.localStorage.length; i++) {
     var key = window.localStorage.key(i);
-    $('tbody').append(`<tr><td>${key}</td><td>${window.localStorage.getItem(key)}</td></tr>`)
+    if (key !== "recipeTitle"){
+      $('tbody').append(`<tr><td>${key}</td><td>${window.localStorage.getItem(key)}</td></tr>`)
+    }
+    
   }
 }
 
@@ -49,9 +52,7 @@ $(document).ready(function() {
 //     button  events     //
 ////////////////////////////
 
-// Ingredient Storage //
-// var cupboard = []
-// window.localStorage.setItem("cupboard", JSON.stringify())
+
 // ADD INGREDIENT //
 $("#add-ingredient").click(function(){
   if (getIngredientKey() !== '' && getIngredientVal() !== ''){
