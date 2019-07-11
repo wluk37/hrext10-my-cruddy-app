@@ -16,15 +16,18 @@
 
 <body>
   <h1>Sugar, Spice, & Everything Nice</h1>
+  <input type="text" id="recipe-title" value="Chocolate Chip Cookies" onfocus="if (this.value === 'Chocolate Chip Cookies') this.value = '';"/>
+  <button type="button" id="save-title" title="SAVE TITLE">Save Title</button>
   <div class="ingredientButtons">
-    <button  type="button" id="add-ingredient" title="ADD ITEM">ABRAKADABRA</button>
-    <button  type="button" id="update-ingredient" title="UPDATE ITEM">BIPPITYBOPPITY</button>
-    <button  type="button" id="remove-ingredient" title="REMOVE ITEM">ZIMZALABIM</button>
-    <button  type="button" id="clear-storage" data-toggle="tooltip" data-placement="right" title="OBLITERATES ITEMS">ELEMENT X</button>
+    <button  type="button" id="add-ingredient" title="ADD ITEM">Add Ingredient</button>
+    <button  type="button" id="update-ingredient" title="UPDATE ITEM">Update Ingredient</button>
+    <button  type="button" id="remove-ingredient" title="REMOVE ITEM">Remove Ingredient</button>
+    <button  type="button" id="clear-storage" data-toggle="tooltip" data-placement="right" title="Removes All Items">OBLITERATION</button>
   </div>
 
-  <input type="text" id="ingredient-key" value="INGREDIENT" onfocus="if (this.value == 'INGREDIENT') this.value='';"/>
-  <input type="text" id="ingredient-value" value="AMOUNT" onfocus="if (this.value == 'AMOUNT') this.value='';"/>
+  <input type="text" id="ingredient-key" value="sugar" onfocus="if (this.value == 'sugar') this.value='';"/>
+  <input type="text" id="ingredient-value" value="2" onfocus="if (this.value == '2') this.value='';"/>
+  <input type="text" id="ingredient-scale" value="tsp" onfocus="if (this.value == 'tsp') this.value='';"/>
 
 
 

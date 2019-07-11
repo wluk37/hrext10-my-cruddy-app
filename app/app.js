@@ -28,7 +28,12 @@ var getIngredientKey = function(){
 var getIngredientVal = function(){
   return $("#ingredient-value").val();
 }
-
+var getIngredientScl = function(){
+  return $("ingredient-scale").val();
+}
+var getRecipeTitle = function(){
+  return $("recipe-title").val();
+}
 var showDatabaseContents = function(){
     $('tbody').html('');
 
@@ -44,11 +49,14 @@ $(document).ready(function() {
 //     button  events     //
 ////////////////////////////
 
+// Ingredient Storage //
+// var cupboard = []
+// window.localStorage.setItem("cupboard", JSON.stringify())
 // ADD INGREDIENT //
 $("#add-ingredient").click(function(){
-  if (getIngredientKey() !== 'INGREDIENT' && getIngredientVal() !== 'AMOUNT'){
+  if (getIngredientKey() !== '' && getIngredientVal() !== ''){
     if ((!keyExists(getIngredientKey())) && (!keyExists(getIngredientKey().toLowerCase()))){
-       addItem(getIngredientKey(), getIngredientVal());
+       addItem(getIngredientKey(), getIngredientVal(), getIngredientScl());
        showDatabaseContents();
     } else {
       alert("Ingredient already exists!")
@@ -93,6 +101,33 @@ $("#clear-storage").click(function(){
 
 
 })
+
+// SAVE RECIPE TITLE //
+
+if(localStorage.getItem("recipeTitle")){
+  $('#recipe-title').val(localStorage.getItem("recipeTitle"));
+}
+
+$("#save-title").click(function(){
+  if (getRecipeTitle() !== ""){
+    window.localStorage.setItem("recipeTitle", $("#recipe-title").val());
+    $("#recipe-title").val(localStorage.getItem("recipeTitle"))
+  }
+})
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
