@@ -26,6 +26,10 @@ label {
   text-decoration: underline;
 }
 
+.table-striped > tbody > tr:nth-child(odd) > td, .table-striped > tbody > tr:nth-child(even) > th {
+   background-color: #ffd8c6;
+}
+
 .banner {
   display: flex;
   justify-content: center;
