@@ -13,13 +13,20 @@ https://getbootstrap.com/docs/4.3/getting-started/introduction/
 
 .table {
    margin: auto;
-   width: 50% !important; 
+   width: 100% !important; 
 }
 
+.everything {
+	display: flex;
+	flex-direction: row;
+	justify-content: space-around;
+
+}
 
 th {
   text-decoration: underline;
-  background-color: #ffc6da 
+  background-color: #ffc6da
+
 }
 
 label {
@@ -39,15 +46,20 @@ label {
 
 .ingredient-buttons{
 	display: flex;
-	padding: 10px;
+	padding: 5px;
 	justify-content: center;
 	background-color: #c6eeff;
+
 }
 
+.event-btn {
+	border-radius: 8px;
+}
 .recipe-banner {
 	display: flex;
 	justify-content: center;
-	flex-direction: row;
+	flex-direction: column;
+    padding: 10px;
 }
 
 body {
@@ -56,5 +68,92 @@ body {
 
 .ingredient-input {
 	display: flex;
-    justify-content: center;
+    justify-content: space-around;
+    text-align: center;
+    padding: 5px;
 }
+
+.ingredient-box {
+	width: 100px;
+}
+
+#save-title {
+	margin-left: 10px
+	width: 50%;
+	border-radius: 0px
+	background-color: white;
+}
+
+#recipe-title {
+	width: 100%;
+}
+
+#clear-storage {
+	width: 200px;
+	background-color: black;
+	color: white;
+	align-self: center;
+	border-radius: 0px; 
+}
+
+.title {
+	align-self: center;
+	padding-top: 5px;
+}
+
+#clear-pantry {
+	background-color: black;
+	color: white;
+}
+
+.equipment-buttons{
+	display: flex;
+	padding: 5px;
+	justify-content: center;
+	background-color: #c6eeff;
+
+}
+
+
+#clear-cupboard {
+	background-color: black;
+	color: white;
+}
+
+.equipment-input {
+	display: flex;
+    justify-content: space-around;
+    text-align: center;
+    padding: 5px;
+}
+
+#equipment-key {
+	margin-right: 5px;
+}
+
+#equipment-value {
+	margin-left: 5px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

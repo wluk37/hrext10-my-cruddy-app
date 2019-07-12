@@ -18,41 +18,115 @@
   <div class="banner">
     <h1>Sugar, Spice, & Everything Nice</h1>
   </div>
+  <!-- Recipe Title -->
   <div class="recipe-banner">
-  <input type="text" id="recipe-title" value="Chocolate Chip Cookies" onfocus="if (this.value === 'Chocolate Chip Cookies') this.value = '';"/>
-  <button type="button" id="save-title" title="SAVE TITLE">Save Title</button>
-  </div>
-  
-  <div class="ingredient-buttons">
-    <div class="ingredient-container">
-      <button  type="button" id="add-ingredient" title="ADD ITEM">Add Ingredient</button>
-      <button  type="button" id="update-ingredient" title="UPDATE ITEM">Update Ingredient</button>
-      <button  type="button" id="remove-ingredient" title="REMOVE ITEM">Remove Ingredient</button>
-      <button  type="button" id="clear-storage" data-toggle="tooltip" data-placement="right" title="Removes All Items">OBLITERATION</button>
+    <input type="text" id="recipe-title" value="Chocolate Chip Cookies" style="text-align:center;" onfocus="if (this.value === 'Chocolate Chip Cookies') this.value = '';"/>
+    <div class="title">
+      <button type="button" class="event-btn" id="save-title" title="SAVE TITLE" style="width:100px;">Save Title</button>
+      <button  type="button" class="event-btn" id="clear-storage" data-toggle="tooltip" data-placement="right" title="Removes All Items">OBLITERATION</button>
     </div>
   </div>
-  <div class="ingredient-input">
-    <input type="text" id="ingredient-key" value="sugar" onfocus="if (this.value == 'sugar') this.value='';"/>
-    <input type="text" id="ingredient-value" value="2" onfocus="if (this.value == '2') this.value='';"/>
-    <input type="text" id="ingredient-scale" value="tsp" onfocus="if (this.value == 'tsp') this.value='';"/>
+  
+
+  <div class="everything">
+    <!-- Ingredient Section -->
+    <div class="ingredient-section">
+      <div class="ingredient-buttons">
+        <div class="ingredient-container">
+          <button  type="button" class="event-btn" id="add-ingredient" title="ADD ITEM">Add Ingredient</button>
+          <button  type="button" class="event-btn" id="update-ingredient" title="UPDATE ITEM">Update Ingredient</button>
+          <button  type="button" class="event-btn" id="remove-ingredient" title="REMOVE ITEM">Remove Ingredient</button>
+          <button  type="button" class="event-btn" id="clear-pantry" title="REMOVES ALL INGREDIENTS">Empty Pantry</button>
+        </div>
+      </div>
+      <div class="ingredient-input">
+        <input type="text" class="event-box" id="ingredient-key" value="sugar" onfocus="if (this.value == 'sugar') this.value='';"/>
+        <input type="text" class="event-box" id="ingredient-value" value="2" onfocus="if (this.value == '2') this.value='';"/>
+        <input type="text" class="event-box" id="ingredient-scale" value="tsp" onfocus="if (this.value == 'tsp') this.value='';"/>
+      </div>    
+      <!-- Table for Necessary Ingredients -->
+      <table class="table table-striped ingredient-list col-md-12">
+        <thead>
+          <tr>
+            <th scope="col">Ingredients</th>
+            <th scope="col">Quantity</th>
+            <th scope="col">Scale</th>
+          </tr>
+        </thead>
+        <tbody id='ingredient-body'>
+        </tbody>
+      </table>
+    </div>
+
+    <!-- Equipment Section -->
+      <!-- Table for Necessary Equipment -->
+    <div class="equipment-section">
+      <div class="equipment-buttons">
+        <div class="equipment-container">
+          <button  type="button" class="event-btn" id="add-equipment" title="ADD EQUIPMENT">Add Equipment</button>
+          <button  type="button" class="event-btn" id="update-equipment" title="UPDATE EQUIPMENT">Update Equipment</button>
+          <button  type="button" class="event-btn" id="remove-equipment" title="REMOVE EQUIPMENT">Remove Equipment</button>
+          <button  type="button" class="event-btn" id="clear-cupboard" title="REMOVES ALL EQUIPMENT">Empty Cupboard</button>
+        </div>
+      </div>
+      <div class="equipment-input">
+        <input type="text" class="event-box" id="equipment-key" value="whisk" onfocus="if (this.value == 'whisk') this.value='';"/>
+        <input type="text" class="event-box" id="equipment-value" value="1" onfocus="if (this.value == '1') this.value='';"/>
+      </div>   
+      <table class="table table-striped equipment-list col-md-12">
+      <thead>
+        <tr>
+          <th scope="col">Equipment</th>
+          <th scope="col">Quantity</th>
+        </tr>
+      </thead>
+      <tbody id='equipment-body'>
+      </tbody>
+      </table>
+    </div>
   </div>
-
-
-<!-- Table for Necessary Ingredients -->
-  <table class="table table-striped ingredient-list col-md-6">
-    <thead>
-      <tr>
-        <th scope="col">Ingredients</th>
-        <th scope="col">Amount</th>
-        <th scope="col">Scale</th>
-      </tr>
-    </thead>
-    <tbody>
-    </tbody>
-  </table>
-
   <script src="app/app.js"></script>
 </body>
 
 
 </html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
